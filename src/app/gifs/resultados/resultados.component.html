@@ -1,0 +1,33 @@
+<!-- <ul>
+
+    <li *ngFor="let gif of getResultados">
+        {{gif.title}}
+
+    </li>
+</ul> -->
+
+
+<div class="row">
+    <div *ngFor="let gif of getResultados"
+    class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+        <div class="card">
+            <img [src]="gif.images.downsized_medium.url" 
+            [alt]="gif.title"
+            class="card-img-top"
+            >
+
+            <div class="card-body">
+                <p class="card-text">
+                    {{gif.title}}
+                       
+                </p>
+            </div>
+        </div>
+        <!-- el animate__animated animate__fadeIn son animaciones de la libreria animate.css y es para que se 
+        vea mas bonito al cargar los gifs. -->
+
+
+
+
+    </div>
+</div>
